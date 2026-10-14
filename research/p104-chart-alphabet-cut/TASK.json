@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "task_id": "p104-side-correction",
+  "priority_revision": 4,
+  "base_commit": "0fdd7d82de03e43c9e5a1000dfbcd380d1b687d2",
+  "original_card": {
+    "id": "p104-side-correction",
+    "question": "Can the native P104 low-rank channel be completed with a legal, fully charged I-G/2 side correction?",
+    "starting_points": [
+      "research/p104-native-channel/README.md",
+      "research/p104-native-channel/PROOF.md",
+      "docs/research/community-efficient1000-review.md"
+    ],
+    "methods": [
+      "Construct one side-correction word at an explicit chronological cut with the needed frames still available.",
+      "Derive a lower bound on the side correction and hosting costs that decides whether this channel can beat the selected budget."
+    ],
+    "acceptance_gate": "An exact arbitrary-input identity, source/target frame availability and restoration at the chosen cut, plus the complete channel+correction+idle/hosting bill or an explicit favorable bound. The native channel alone is not a supplier.",
+    "first_step": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/research_baseline.py"
+      ],
+      "expected": "PASS_RESEARCH_BASELINE_BINDINGS_ONLY",
+      "inspect": "Read the P104 open next questions and its fixed local histogram; inspect why appending I-G/2 after source completion is not justified. #1991 supplies the checked native channel, not the missing correction.",
+      "scope": "Source-bound orientation only. Read the named package and review before relying on its local evidence; this command is not its replay or supplier admission."
+    },
+    "first_experiment": "Choose one exact side-correction cut and bound its allowed cost from a favorable completed moment at a declared target. Stop or hand off if the necessary source/target access cannot be justified or even the optimistic total misses the target.",
+    "bottleneck_link": "Completing an already realized changed channel tests a concrete construction opportunity, instead of refining the incumbent packing. A positive local result still needs global and all-size admission.",
+    "allowed_variations": [
+      "One correction factorization, one chronological cut, or one explicit hosting obstruction.",
+      "A changed correction schedule with an updated full bill and native frame contract."
+    ],
+    "scope_change_triggers": [
+      "Recompiling the already certified low-rank channel without closing a new obligation.",
+      "Treating a pending ancestor, local histogram or unpriced side correction as an admitted global supplier."
+    ],
+    "overlap_terms": [
+      "P104",
+      "I-G/2",
+      "side correction",
+      "native channel",
+      "1972",
+      "1991"
+    ]
+  },
+  "scope_status": "refined",
+  "actual_scope": "Prove a directed-chart-alphabet communication obstruction for arbitrary retimings and common-chart linear mixing of the native P104 word; independently certify its eight crossing occurrences.",
+  "scope_change_reason": "The live revision-4 handoff in PR2090 and PR2082 explicitly leaves retiming open. A dependency-order probe found that the cut survives even after dropping every time/role constraint, so the delivered proof uses the stronger directed chart alphabet instead of the frozen event chronology.",
+  "bottleneck_link": "A complete identity needs source-to-target rank 104 per array dimension. The unchanged directed alphabet carries at most eight with the retained drops, so rescheduling or scalar tuning alone cannot complete this P104 channel. A successful successor must change a directed transport type or the counted message capacity.",
+  "budget_minutes": 120,
+  "stop_rule": "Stop this route once the chronology-free separator is proved and independently checked, or an actual executable bypass is found; do not run a large scheduling search after an alphabet obstruction.",
+  "outcome": "negative-result",
+  "evidence": "RESULT.json binds 444 charts, 740 directed types, 1410 occurrences, the 222-chart reachable set and eight rank-seven crossing occurrences. Two code-disjoint implementations agree and replay all 280 formal input columns; no full supplier or kappa is claimed.",
+  "author": "Tairitsu-Aya",
+  "ai_assistance": "Substantial OpenAI Codex assistance for proof, source reading, implementation and validation. Both independent code paths were written by this same author/assistant. No independent human or formal-kernel review.",
+  "open_questions": [
+    {
+      "question": "Can a new directed transport or operation cross the certified chart partition with a favorable complete budget?",
+      "why_it_matters": "Changing order or same-chart coefficients inside the existing alphabet cannot complete identity.",
+      "first_step": "Name exact source/target charts, construct a source-information route and then a jointly executable native schedule with restored dirty state.",
+      "blocked_by": "No new admitted edge, complete local word, chronological owner map or favorable completed moment is supplied."
+    },
+    {
+      "question": "Can a nested factorization through an unlisted intermediate chart reuse net rank progress?",
+      "why_it_matters": "It changes the directed alphabet without necessarily increasing rank mass, but splits the positive child profile.",
+      "first_step": "Test common source/target availability and price the split child histogram before any large synthesis.",
+      "blocked_by": "Neither simultaneous access nor native realization/global hosting of the changed word is established."
+    }
+  ],
+  "selection_mode": "Explicit revision-4 central handoff after completing the selected-stock review; task chosen with --task, not a claimed independent random track draw.",
+  "selection_file": "SELECTION.json",
+  "claim_url": "https://github.com/CrocSwap/integer-mult-bounds/pull/2090#issuecomment-6176563969",
+  "claim_expires_utc": "2026-10-14T21:30:00Z",
+  "compute_limit": {
+    "maximum_local_workers": 3,
+    "native_positive_control_cpus": 1,
+    "native_positive_control_rss_limit_bytes": 1073741824
+  },
+  "predecessors": [
+    {
+      "pr": 1972,
+      "head": "fd82d172f46933fd253c2c6de4bd5eaff5429cfd",
+      "author": "Rohan Arun",
+      "credit": "Complete scalar/frame G/2 channel and dirty restoration."
+    },
+    {
+      "pr": 1991,
+      "head": "6e222517e182e98499239bc9a4009f540e1c5520",
+      "author": "Chafik Boukhalfa",
+      "credit": "Native realization and source distribution."
+    },
+    {
+      "pr": 1940,
+      "author": "Adam Gall",
+      "credit": "Exact 32-chain chronological delivery schedule."
+    },
+    {
+      "pr": 1071,
+      "author": "Josie Elliston",
+      "credit": "P104 fixture and decoder geometry."
+    },
+    {
+      "pr": 1125,
+      "author": "Ali Romman",
+      "credit": "Monotone delivery lower bound."
+    },
+    {
+      "pr": 2082,
+      "head": "60f4e337ffba470e09727dd435b1f1be3b67d03d",
+      "author": "David Arias",
+      "credit": "Sharp frozen-itinerary temporal cut and correction-budget obstruction."
+    },
+    {
+      "pr": 2090,
+      "head": "dff116efc2c4ddd7236020ad8316db5c98aa693e",
+      "author": "Adam Gall",
+      "credit": "Sharp frozen-itinerary eight-query cut; explicit retiming continuation."
+    },
+    {
+      "pr": 2083,
+      "head": "7231ab9715308e87f8254d4bf10337e8ebde0b0f",
+      "author": "Adam Gall",
+      "credit": "Terminal-cut paid-rank floor; not reproved or used as the new obstruction."
+    },
+    {
+      "pr": 2113,
+      "head": "fa1a45f91c14bb4b372d19dd7d66e11fea480ef5",
+      "author": "Jeremy Diviney",
+      "credit": "Concurrent arbitrary-frame-path interleaving cut, two independent graph implementations and legal retiming witness. Shared retiming conclusion not claimed new."
+    }
+  ],
+  "overlap_at_entry": {
+    "searched_at_utc": "2026-10-14T19:23:36Z",
+    "open_prs": 369,
+    "pr_snapshot_utc": "2026-10-14T19:20:47Z",
+    "discussion_records": 754,
+    "discussion_snapshot_utc": "2026-10-14T19:23:36Z",
+    "complete_pagination": true,
+    "limits": "Cached text snapshots are non-atomic and exclude arbitrary code diffs and unpublished work. Read live PR2082/2083/2090 bodies and exact heads; those results explicitly exclude retiming. Refresh before submission."
+  },
+  "validation": {
+    "windows": {
+      "python": "3.12.9",
+      "commands": [
+        "python -I -O -B research/p104-chart-alphabet-cut/verify.py",
+        "python -I -O -B research/p104-chart-alphabet-cut/audit.py"
+      ],
+      "outcome": "both passed"
+    },
+    "linux": {
+      "distribution": "Ubuntu 24.04 under WSL",
+      "python": "3.12.3",
+      "command": "python3 -B scripts/research_package.py --package research/p104-chart-alphabet-cut",
+      "cpu_affinity": [
+        1
+      ],
+      "elapsed_seconds": 1.25,
+      "max_rss_kib": 35744,
+      "outcome": "PASS_REGISTERED_RESEARCH_PACKAGE outcome=negative-result"
+    },
+    "native_positive_control": {
+      "command": "python3 -I -O -B research/p104-native-channel/verify.py",
+      "elapsed_seconds": 17.059,
+      "sampled_peak_rss_bytes": 36466688,
+      "exit_code": 0,
+      "status": "PASS_CONCRETE_NATIVE_P104_LOW_RANK_CHANNEL"
+    },
+    "not_run": [
+      "native regeneration",
+      "selected full cold replay for this package",
+      "hosted CI",
+      "Lean or another proof assistant"
+    ],
+    "limits": "The generic rank implication is a written proof over the declared linear operation alphabet. Exact finite checks authenticate its specific graph and attaining endpoint; they do not establish an all-size compiler."
+  },
+  "publication": "Public fork branch only: independent corroboration and explicit directed-type extension after detecting concurrent PR2113 before submission; no competing PR planned.",
+  "overlap_at_submission": {
+    "searched_at_utc": "2026-10-14T19:50:03Z",
+    "open_prs": 380,
+    "pr_snapshot_utc": "2026-10-14T19:48:34Z",
+    "discussion_records": 754,
+    "discussion_snapshot_utc": "2026-10-14T19:23:36Z",
+    "discussion_refresh": "failed with GitHub GraphQL unexpected EOF; retained old complete cache",
+    "live_supplement": "Read current PR2082/2090/2113 bodies and exact heads; subsequent recent-discussion GraphQL supplement also failed.",
+    "new_overlap": {
+      "pr": 2113,
+      "head": "fa1a45f91c14bb4b372d19dd7d66e11fea480ef5",
+      "created_at_utc": "2026-10-14T19:37:04Z",
+      "conclusion": "Same arbitrary-interleaving rank-eight obstruction; publish branch as corroboration instead of opening a duplicate PR."
+    },
+    "limits": "Non-atomic cached text coverage, stale discussion data, no arbitrary-diff or unpublished-work novelty guarantee."
+  }
+}
